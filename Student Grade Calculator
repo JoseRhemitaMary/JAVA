@@ -1,0 +1,52 @@
+package udemyjavacore;
+import java .util.*;
+public class grade {
+	public static void main(String args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter your name");
+		String name = sc.nextLine();
+		System.out.println("Enter your class");
+		int cl = sc.nextInt();
+		System.out.println("Enter no of subjects");
+		int numofsubject = sc.nextInt();
+		int[] marks=new int[numofsubject];
+		int totalmarks=0;
+		
+		for(int i=0;i<numofsubject;i++) {
+			System.out.println("enter the mark for"+(i+1)+"subject:");
+	          marks[i]= sc.nextInt();
+	          if(marks[i]<0&&marks[i]>100) {
+	        	  System.out.println(" You entered Invalid input");
+	        	  
+	          }
+			 totalmarks=+totalmarks+marks[i];
+			
+		}
+		double avg = totalmarks/numofsubject;
+		String grade = null;
+		if(avg>=90&&avg<=100) {
+			grade ="A";
+		}
+		else if (avg>=80&&avg<=89) {
+			grade="B";
+		}
+		else if (avg>=70&&avg<=79) {
+			grade="C";
+	}
+		else if (avg>=60&&avg<=69) {
+			grade="D";
+
+}
+		
+		System.out.println("Results");
+		System.out.println("name");
+		System.out.println("cl");
+		System.out.println("total marks"+totalmarks);
+		System.out.println("Average"+avg);
+		System.out.println("Your Grade"+grade);
+		
+		
+		
+		
+	}
+}
